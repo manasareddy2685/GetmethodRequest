@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test name="RestAPI" verbose="100">
+        <groups>
+            <run>
+                  <include name="GET"/>
+                 <include name="Post"/>
+                 <include name="PUT"/>
+                 <include name="DELETE"/>`
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.GetMethod">
+                <methods>
+                    <include name="GetRequest"/>
+                    <include name="GetResponseStatus"/>
+                    <include name="GetResponseBody"/>
+                    <include name="GetResponseHeaders"/>
+                    <include name="GetResponseContentType"/>
+                    <include name="GetResponseTime"/>
+                    <include name="GetPetAllStatus"/>
+
+                </methods>
+            </class>
+                <class name="Test.postRequest">
+                    <methods>
+                        <include name="Post"/>
+                    </methods>
+                </class>
+
+               <class name="Test.PutMethod">
+                <methods>
+                    <include name="PUT"/>
+                </methods>
+             </class>
+         <class name="Test.DeleteMethod">
+         <methods>
+        <include name="DELETE"/>
+        </methods>
+</class>
+
+        </classes>
+    </test>
+</suite>
